@@ -1,4 +1,4 @@
-#ifndef TIMESERVER_H
+﻿#ifndef TIMESERVER_H
 #define TIMESERVER_H
 
 #include <QTcpServer>
@@ -10,6 +10,7 @@ public:
     TimeServer(QObject *parent=0);
 protected:
     void incomingConnection(int socketDescriptor);      //(a)
+    void slottest();
 private:
     Dialog *dlg;										//(b)
 };

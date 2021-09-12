@@ -1,4 +1,4 @@
-#include "dialog.h"
+﻿#include "dialog.h"
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QMessageBox>
@@ -6,10 +6,10 @@
 Dialog::Dialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(tr("多线程时间服务器"));
-    Label1 =new QLabel(tr("服务器端口："));
+    setWindowTitle(QStringLiteral("多线程时间服务器"));
+    Label1 =new QLabel(QStringLiteral("服务器端口："));
     Label2 = new QLabel;
-    quitBtn = new QPushButton(tr("退出"));
+    quitBtn = new QPushButton(QStringLiteral("退出"));
     QHBoxLayout *BtnLayout = new QHBoxLayout;
     BtnLayout->addStretch(1);
     BtnLayout->addWidget(quitBtn);
@@ -28,13 +28,16 @@ Dialog::Dialog(QWidget *parent)
         close();
         return;
     }
+
     Label1->setText(tr("服务器端口：%1.").arg(timeServer->serverPort()));
 }
 
 void Dialog::slotShow()
 {
-    Label2->setText(tr("第%1次请求完毕。").arg(++count));
+    Label2->setText(QStringLiteral("第%1次请求完毕。").arg(++count));
 }
+
+
 
 Dialog::~Dialog()
 {

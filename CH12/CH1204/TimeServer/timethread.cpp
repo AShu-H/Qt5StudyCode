@@ -1,4 +1,4 @@
-#include "timethread.h"
+﻿#include "timethread.h"
 #include <QDateTime>
 #include <QByteArray>
 #include <QDataStream>
